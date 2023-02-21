@@ -1,0 +1,7 @@
+cc_library(
+    name = "explore_me",
+    srcs = ["explore_me.cpp"],
+    hdrs = ["explore_me.h"],
+    visibility = ["//visibility:public"],
+)
+
