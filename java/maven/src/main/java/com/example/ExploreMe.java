@@ -9,8 +9,8 @@ public class ExploreMe {
                     if (c.startsWith("@")) {
                         String className = c.substring(1);
                         try {
-                            Class.forName(className);
-                        } catch (ClassNotFoundException ignored) {
+                            Class.forName(className).newInstance();
+                        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ignored) {
                         }
                     }
                 }
