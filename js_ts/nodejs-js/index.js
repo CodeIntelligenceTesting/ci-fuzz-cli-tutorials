@@ -17,10 +17,10 @@ app.post('/api/add', (req, res) => {
 
     if (status) {
         res.status(201)
-        res.send("Added successfully!");
+        res.send("Added successfully!\n");
     }
     res.status(400)
-    res.send("You are doing something wrong!");
+    res.send("You are doing something wrong!\n");
 
 });
 
@@ -28,10 +28,10 @@ app.get('/api/list', (req, res) => {
 
     const todos = listFile();
     res.status(200)
-    if (todos[0]) {
-        res.send("Here is the todos:\n" + todos[1]);
+    if (todos !== null && todos.length > 0) {
+        res.send("Here is the todos:\n" + todos);
     }
-    res.send("You are doing something wrong!")
+    res.send("There is nothing to list!\n")
 });
 
 app.post('/api/delete', (req, res) => {
@@ -40,7 +40,7 @@ app.post('/api/delete', (req, res) => {
     if (deleteEntry(id)) {
         res.send("TODO is deleted successfully!");
     }
-    res.send("You are doing something wrong!")
+    res.send("You should enter valid id...\n")
 
 });
 
@@ -50,7 +50,7 @@ app.get('/api/deleteList', (req, res) => {
     if (deleteFile()) {
         res.send("The database is deleted!")
     }
-    res.send("You are doing something wrong!");
+    res.send("There is not a database to delete...\n");
 
 });
 
