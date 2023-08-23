@@ -1,0 +1,14 @@
+{
+  "name": "TODO list server",
+  "version": "1.0.0",
+  "description": "NodeJS tutorial example",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
+}
