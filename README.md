@@ -11,5 +11,5 @@ This repo contains tutorials to help you learn how to create your own fuzz tests
 ## Tutorials
 
 * [C/C++](https://docs.code-intelligence.com/tutorials/ci-fuzz-tutorial-java)
-* [Java] (https://docs.code-intelligence.com/tutorials/ci-fuzz-tutorial-c-cpp)
-* [JavaScript/TypeScript] (https://docs.code-intelligence.com/tutorials/ci-fuzz-tutorial-javascript-typescript)
+* [Java](https://docs.code-intelligence.com/tutorials/ci-fuzz-tutorial-c-cpp)
+* [JavaScript/TypeScript](https://docs.code-intelligence.com/tutorials/ci-fuzz-tutorial-javascript-typescript)
