@@ -9,7 +9,6 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
-    id 'jacoco'
 }
 
 repositories {
@@ -17,17 +16,12 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
+
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'com.github.CodeIntelligenceTesting.cifuzz.App'
-}
-
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+    mainClass = 'com.example.App'
 }
