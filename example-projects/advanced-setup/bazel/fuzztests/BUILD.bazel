@@ -1,0 +1,19 @@
+load("@rules_fuzzing//fuzzing:cc_defs.bzl", "cc_fuzz_test")
+
+cc_fuzz_test(
+    name = "test_me_fuzz_test",
+    srcs = [
+        "test_me_fuzz_test.cpp",
+    ],
+    corpus = glob(
+        ["test_me_fuzz_test_inputs/**"],
+        allow_empty = True,
+    ) + select({
+        "@cifuzz//:collect_coverage": glob([".test_me_fuzz_test_cifuzz_corpus/**"], allow_empty = True),
+        "//conditions:default": [],
+    }),
+    deps = [
+        "//lib/src:test_me",
+        "@cifuzz",
+    ],
+)

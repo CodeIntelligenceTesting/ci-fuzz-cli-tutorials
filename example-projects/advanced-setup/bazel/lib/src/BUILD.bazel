@@ -1,0 +1,7 @@
+cc_library(
+    name = "test_me",
+    srcs = ["test_me.cpp"],
+    hdrs = ["test_me.h"],
+    visibility = ["//visibility:public"],
+)
+

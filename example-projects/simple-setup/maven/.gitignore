@@ -1,0 +1,7 @@
+/target/
+.cifuzz-*/
+*_inputs
+crash-*
+
+# ignore findings for example projects
+src/test/resources/

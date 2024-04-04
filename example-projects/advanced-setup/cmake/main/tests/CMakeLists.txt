@@ -1,0 +1,2 @@
+add_fuzz_test(explore_me_fuzztest explore_me_fuzztest.cpp)
+target_link_libraries(explore_me_fuzztest PRIVATE exploreMe)

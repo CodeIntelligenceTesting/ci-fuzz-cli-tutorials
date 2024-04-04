@@ -1,0 +1,4 @@
+/target/
+.cifuzz-*/
+*_inputs
+crash-*

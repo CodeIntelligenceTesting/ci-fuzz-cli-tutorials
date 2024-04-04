@@ -1,0 +1,9 @@
+.cifuzz-*/
+*.log
+
+*.fuzz/
+
+coverage
+*.lcov
+
+node_modules/
