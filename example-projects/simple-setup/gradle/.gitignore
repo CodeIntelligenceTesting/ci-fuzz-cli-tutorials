@@ -1,0 +1,18 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+/build
+
+/bin
+
+.project
+.classpath
+.settings/
+
+.cifuzz-*/
+*_inputs
+crash-*
+
+# ignore findings for example projects
+src/test/resources/

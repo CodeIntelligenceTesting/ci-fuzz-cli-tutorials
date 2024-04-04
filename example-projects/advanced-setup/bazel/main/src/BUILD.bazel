@@ -1,0 +1,18 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_library(
+    name = "explore_me",
+    srcs = ["explore_me.cpp"],
+    hdrs = ["explore_me.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    deps = [
+        "explore_me",
+        "//lib/src:test_me",
+        ],
+)
+
