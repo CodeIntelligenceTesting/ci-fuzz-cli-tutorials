@@ -3,7 +3,6 @@
 #include <cstring>
 using namespace std;
 
-// just a function with multiple paths that can be discoverd by a fuzzer
 void exploreMe(int a, int b, string c) {
   if (a >= 20000) {
     if (b >= 2000000) {
