@@ -1,7 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.7.20"
     id("java-library")
-    id("com.code-intelligence.cifuzz") version "1.16.0"
+    id("com.code-intelligence.cifuzz") version "1.17.0"
 }
 
 repositories {
