@@ -6,16 +6,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.cifuzz.tests</groupId>
+		<groupId>com.cifuzz</groupId>
 		<artifactId>maven-extended-project</artifactId>
 		<version>1.0</version>
 	</parent>
+
+	<groupId>com.cifuzz.app</groupId>
 	<artifactId>app</artifactId>
 	<name>app</name>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.cifuzz.tests</groupId>
+			<groupId>com.cifuzz.util</groupId>
 			<artifactId>util</artifactId>
 			<version>1.0</version>
 		</dependency>
