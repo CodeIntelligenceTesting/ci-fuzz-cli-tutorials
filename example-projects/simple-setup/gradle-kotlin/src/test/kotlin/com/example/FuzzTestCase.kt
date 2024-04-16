@@ -1,14 +1,11 @@
 package com.example
 
-import com.code_intelligence.jazzer.api.FuzzedDataProvider
 import com.code_intelligence.jazzer.junit.FuzzTest
+import com.code_intelligence.jazzer.mutation.annotation.NotNull
 
 class FuzzTestCase {
     @FuzzTest
-    fun myFuzzTest(data: FuzzedDataProvider) {
-        val a: Int = data.consumeInt()
-        val b: Int = data.consumeInt()
-        val c: String = data.consumeRemainingAsString()
+    fun myFuzzTest(a: Int, b: Int, @NotNull c: String) {
         val ex = ExploreMe(a)
         ex.exploreMe(b, c)
     }
