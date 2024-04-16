@@ -5,10 +5,11 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cifuzz.tests</groupId>
+	<groupId>com.cifuzz</groupId>
 	<artifactId>maven-extended-project</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
+	
 	<name>Example Maven Project</name>
 
 	<properties>
@@ -28,7 +29,7 @@
 			<extension>
 				<groupId>com.code-intelligence</groupId>
 				<artifactId>cifuzz-maven-extension</artifactId>
-				<version>1.6.0</version>
+				<version>1.7.0</version>
 			</extension>
 		</extensions>
 	</build>

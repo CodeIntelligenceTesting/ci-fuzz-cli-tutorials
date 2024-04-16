@@ -11,23 +11,29 @@ This is an extended example maven project which covers custom project setups:
 Right now we do not support a multi module project setup with maven so this project has two `cifuzz.yaml`,
 one in the module `tests` and one in `util`.
 
+## Setup
+
+To run the fuzz tests, the Maven `install` command needs to be run to be able to resolve all dependencies.
+
+```
+mvn -Dmaven.test.skip=true install
+```
+
 ## Run
 
 ### Exception
 
 ```
-cd util
-cifuzz run util.UtilTest::joinFuzzTest
-
-cd tests
-cifuzz run UtilFuzzTest::fuzzTest
+cifuzz -C util run util.UtilTest::joinFuzzTest
+```
+```
+cifuzz -C tests run UtilFuzzTest::fuzzTest
 ```
 
 ### Negative Array Size Exception
 
 ```
-cd tests
-cifuzz run NegativeArraySizeFuzzTest::fuzzTest
+cifuzz -C tests run NegativeArraySizeFuzzTest::fuzzTest
 ```
 
 ## Bundle
@@ -35,8 +41,7 @@ cifuzz run NegativeArraySizeFuzzTest::fuzzTest
 ### Tests
 
 ```
-cd tests
-cifuzz bundle
+cifuzz -C tests bundle
 ```
 
 Should include **2** fuzz tests
@@ -47,8 +52,7 @@ Should include **2** fuzz tests
 ### Util
 
 ```
-cd util
-cifuzz bundle
+cifuzz -C util bundle
 ```
 
 Should include **1** fuzz test
