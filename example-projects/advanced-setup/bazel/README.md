@@ -1,10 +1,12 @@
 ## Project Description
 
-This is an extended example Bazel project with multiple packages and
-two fuzztests `main/tests:explore_me_fuzz_test` and `fuzztests:test_me_fuzz_test`.
+This is a Bazel project configured with **cifuzz** which includes:
 
-The `explore_me_fuzz_test` is defined in the same package as the source
-code and `test_me_fuzz_test` is located in a separated package.
+- multiple packages
+- two Fuzz Tests
+  - `main/tests:explore_me_fuzz_test`, defined in the same package as the source
+    code
+  - `fuzztests:test_me_fuzz_test`, located in a separated package
 
 ## Run
 
@@ -28,7 +30,8 @@ cifuzz run fuzztests:test_me_fuzz_test
 cifuzz bundle main/tests:explore_me_fuzz_test
 ```
 
-Should include one fuzz test with two targets to cover fuzzing and coverage builds.
+The bundle should include **1** Fuzz Test with **2** targets to cover fuzzing 
+and coverage builds:
 
 ```
 ...
@@ -45,7 +48,8 @@ path: replayer/coverage/main/tests/explore_me_fuzz_test/bin/explore_me_fuzz_test
 cifuzz bundle
 ```
 
-Should include one fuzz test with two targets to cover fuzzing and coverage builds.
+The bundle should include **1** Fuzz Test with **2** targets to cover fuzzing 
+and coverage builds:
 
 ```
 ...

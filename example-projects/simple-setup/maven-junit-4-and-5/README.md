@@ -1,12 +1,13 @@
-# cifuzz Gradle example
+## Project Description
 
-This is a simple Maven based project with both JUnit 4 and JUnit 5 unit tests 
-and a fuzz test.
-It should quickly produce a finding, but slow enough to
-see the progress of the fuzzer.
+This is a simple Maven Java project configured with **cifuzz** and includes
+one Fuzz Test and one JUnit 4 as well as one JUnit 5 Unit Test, demonstrating
+the use of the `junit-vintage-engine`.
 
-You can start fuzzing with
+## Run
 
 ```bash
 cifuzz run com.example.ExploreFuzzTest::myFuzzTest 
 ```
+
+The Fuzz Test should trigger a Remote Code Execution.

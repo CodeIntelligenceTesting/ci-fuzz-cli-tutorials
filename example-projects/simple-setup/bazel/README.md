@@ -1,18 +1,19 @@
-# cifuzz bazel example
+## Project Description
 
-This is a simple bazel based project, already configured with
-**cifuzz**. It should quickly produce a finding, but slow enough to
-see the progress of the fuzzer.
+This is a simple Bazel project configured with **cifuzz** and has
+one Fuzz Test.
 
-You can start the fuzzing with
+## Run
 
 ```bash
-cifuzz run //src:explore_me_fuzz_test
+cifuzz run src:explore_me_fuzz_test
 ```
+
+The Fuzz Test should trigger a Heap Buffer Overflow.
 
 ## Create regression test
 
-After you have discovered a finding, you may want to include this as
+After you have discovered a Finding, you may want to include this as
 part of a regression test. To replay findings from the
 `src/explore_me_fuzz_test_inputs` directory:
 
