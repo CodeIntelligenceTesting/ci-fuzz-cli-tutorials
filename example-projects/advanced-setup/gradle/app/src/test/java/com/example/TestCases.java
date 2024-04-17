@@ -1,7 +1,8 @@
 package com.example;
 
-import com.code_intelligence.jazzer.api.FuzzedDataProvider;
 import com.code_intelligence.jazzer.junit.FuzzTest;
+import com.code_intelligence.jazzer.mutation.annotation.NotNull;
+
 import org.junit.jupiter.api.Test;
 
 public class TestCases {
@@ -20,11 +21,8 @@ public class TestCases {
     }
 
     @FuzzTest
-    void remoteCodeFuzzTest(FuzzedDataProvider data) {
+    void remoteCodeFuzzTest(int a, @NotNull String b) {
         // Fuzz test that finds RCE
-        int a = data.consumeInt();
-        String b = data.consumeRemainingAsString();
-
         RemoteCodeExecution remoteCode = new RemoteCodeExecution(a);
         remoteCode.trigger(b);
     }

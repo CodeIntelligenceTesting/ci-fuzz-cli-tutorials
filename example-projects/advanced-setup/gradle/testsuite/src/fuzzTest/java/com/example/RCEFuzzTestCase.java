@@ -1,26 +1,19 @@
 package com.example;
 
-import com.code_intelligence.jazzer.api.FuzzedDataProvider;
 import com.code_intelligence.jazzer.junit.FuzzTest;
-import com.example.RemoteCodeExecution;
+import com.code_intelligence.jazzer.mutation.annotation.NotNull;
 
 public class RCEFuzzTestCase {
     @FuzzTest
-    void fuzzTestTrigger(FuzzedDataProvider data) {
-        // Trigger remote code execution
-        int a = data.consumeInt();
-        String b = data.consumeRemainingAsString();
-
+    void fuzzTestTrigger(int a, @NotNull String b) {
         RemoteCodeExecution rce = new RemoteCodeExecution(a);
         rce.trigger(b);
     }
 
     @FuzzTest
-    void fuzzTestDontTrigger(FuzzedDataProvider data) {
+    void fuzzTestDontTrigger(@NotNull String b) {
         // Don't trigger remote code execution
         // by using the overloaded constructor
-        String b = data.consumeRemainingAsString();
-
         RemoteCodeExecution rce = new RemoteCodeExecution();
         rce.trigger(b);
     }

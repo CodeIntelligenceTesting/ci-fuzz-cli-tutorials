@@ -1,7 +1,7 @@
 package util;
 
-import com.code_intelligence.jazzer.api.FuzzedDataProvider;
 import com.code_intelligence.jazzer.junit.FuzzTest;
+import com.code_intelligence.jazzer.mutation.annotation.NotNull;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,8 +15,8 @@ public class UtilTest {
     }
 
     @FuzzTest
-    void joinFuzzTest(FuzzedDataProvider data) throws Exception {
+    void joinFuzzTest(@NotNull String a) throws Exception {
         // Trigger Exception
-        Util.join(data.consumeRemainingAsString());
+        Util.join(a);
     }
 }
