@@ -1,9 +1,12 @@
 ## Project Description
 
-This is an extended example project categorized under build system "other".
-It includes two fuzz tests
-`main/tests/explore_me_fuzztest` and `fuzztests/test_me_fuzztest` in a multiple package
-setup and one corresponding Makefile.
+This is a C++ Make project configured with **cifuzz**, which includes:
+
+- multiple packages
+- one Makefile
+- two Fuzz Tests
+  - `main/tests/explore_me_fuzztest` 
+  - `fuzztests/test_me_fuzztest` 
 
 ## Run
 
@@ -27,7 +30,8 @@ cifuzz run fuzztests/test_me_fuzztest
 cifuzz bundle main/tests/explore_me_fuzztest
 ```
 
-Should include the fuzz test with two targets to cover fuzzing and coverage builds.
+The bundle hould include **1** Fuzz Test with **2** targets to cover fuzzing and 
+coverage builds:
 
 ```
 ...

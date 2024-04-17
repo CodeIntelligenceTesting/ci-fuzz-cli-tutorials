@@ -1,7 +1,11 @@
 ## Project Description
 
-This is an extended example CMake project which includes two fuzz tests
-`test_me_fuzztest`and `explore_me_fuzztest` in a multiple package setup.
+This is a CMake project configured with **cifuzz* which includes:
+
+- multiple packages
+- two Fuzz Tests
+  - `test_me_fuzztest`
+  - `explore_me_fuzztest` 
 
 ## Run
 
@@ -23,8 +27,8 @@ cifuzz run test_me_fuzztest
 cifuzz bundle
 ```
 
-Should include both fuzz tests with four targets in total to cover
-fuzzing and coverage builds.
+The bundle should include **2** Fuzz Tests with **4** targets in total to cover
+fuzzing and coverage builds:
 
 ```
 ...

@@ -1,19 +1,16 @@
 ## Project Description
 
-This is an extended example maven project which covers custom project setups:
+This is an Maven project configured with **cifuzz** which includes:
 
-- multiple fuzz tests in one class
-- mixed unit and fuzz tests in one class
+- class with multiple Fuzz Tests
+- class with mixed Unit and Fuzz Tests
 - changed source directory for test source set
 - multi-project layout
-- more than one fuzzable class (with different findings)
-
-Right now we do not support a multi module project setup with maven so this project has two `cifuzz.yaml`,
-one in the module `tests` and one in `util`.
 
 ## Setup
 
-To run the fuzz tests, the Maven `install` command needs to be run to be able to resolve all dependencies.
+To run the fuzz tests, the Maven `install` command needs to be called to be able 
+to resolve all dependencies.
 
 ```
 mvn -Dmaven.test.skip=true install
@@ -44,7 +41,7 @@ cifuzz -C tests run NegativeArraySizeFuzzTest::fuzzTest
 cifuzz -C tests bundle
 ```
 
-Should include **2** fuzz tests
+The bundle should include **2** Fuzz Tests:
 
 - `NegativeArraySizeFuzzTest::fuzzTest`
 - `UtilFuzzTest::fuzzTest`
@@ -55,6 +52,6 @@ Should include **2** fuzz tests
 cifuzz -C util bundle
 ```
 
-Should include **1** fuzz test
+The bundle should include **1** Fuzz Test:
 
 - `util.UtilTest::joinFuzzTest`

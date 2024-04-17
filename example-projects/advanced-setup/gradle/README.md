@@ -1,12 +1,11 @@
 ## Project Description
 
-This is an extended example gradle project which covers custom project setups:
+This is a Gradle project configured with **cifuzz** which includes:
 
-- multiple fuzz tests in one class
-- mixed unit and fuzz tests in one class
+- class with multiple Fuzz Tests
+- class with mixed Unit and Fuzz Tests
 - changed source directory for test source set
 - multi-project layout
-- more than one fuzzable class (with different findings)
 
 ## Run
 
@@ -38,7 +37,7 @@ cifuzz run -C testsuite com.example.RCEFuzzTestCase::fuzzTestDontTrigger
 cifuzz -C app bundle
 ```
 
-Should include **1** fuzz test
+The bundle should include **1** Fuzz Test:
 
 - `com.example.TestCases::remoteCodeFuzzTest`
 
@@ -48,7 +47,7 @@ Should include **1** fuzz test
 cifuzz -C testsuite bundle
 ```
 
-Should include **3** fuzz tests
+The bundle should include **3** Fuzz Tests:
 
 - `com.example.OutOfBoundsTestCase::fuzzTest`
 - `com.example.RCEFuzzTestCase::fuzzTestTrigger`
