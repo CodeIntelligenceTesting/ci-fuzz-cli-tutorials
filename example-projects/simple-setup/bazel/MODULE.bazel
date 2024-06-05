@@ -1,0 +1,3 @@
+bazel_dep(name = "rules_fuzzing", version = "0.5.2")
+non_module_dependencies = use_extension("@rules_fuzzing//fuzzing/private:extensions.bzl", "non_module_dependencies")
+use_repo(non_module_dependencies, "rules_fuzzing_oss_fuzz")
