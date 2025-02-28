@@ -36,8 +36,35 @@
 			<extension>
 				<groupId>com.code-intelligence</groupId>
 				<artifactId>cifuzz-maven-extension</artifactId>
-				<version>1.7.0</version>
+				<version>1.13.1</version>
 			</extension>
 		</extensions>
+
+		<plugins>
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.11</version>
+            <configuration>
+                <excludes>
+                    <exclude>**</exclude> <!-- Exclude a package -->
+                </excludes>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
 	</build>
 </project>
