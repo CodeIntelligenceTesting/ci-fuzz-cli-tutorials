@@ -29,21 +29,9 @@
 			<extension>
 				<groupId>com.code-intelligence</groupId>
 				<artifactId>cifuzz-maven-extension</artifactId>
-				<version>1.7.0</version>
+				<version>1.13.2</version>
 			</extension>
 		</extensions>
 	</build>
 
-	<repositories>
-		<repository>
-			<id>code-intelligence</id>
-			<url>https://gitlab.code-intelligence.com/api/v4/projects/89/packages/maven</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>code-intelligence</id>
-			<url>https://gitlab.code-intelligence.com/api/v4/projects/89/packages/maven</url>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
