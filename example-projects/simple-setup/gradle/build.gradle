@@ -1,21 +1,9 @@
 plugins {
 	id 'application'
-	id "com.code-intelligence.cifuzz" version "1.17.0"
+	id "com.code-intelligence.cifuzz" version "1.23.2"
 }
 
 repositories {
-	// Configure access to CI repository
-	maven {
-		name "CodeIntelligenceRepository"
-		url "https://gitlab.code-intelligence.com/api/v4/projects/89/packages/maven"
-		credentials {
-			username CodeIntelligenceRepositoryUsername
-			password CodeIntelligenceRepositoryPassword
-		}
-		content {
-			includeGroupByRegex("com\\.code-intelligence.*")
-		}
-	}
 	mavenCentral()
 }
 
