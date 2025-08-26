@@ -15,10 +15,7 @@ cc_fuzz_test(
     corpus = glob(
         ["explore_me_fuzz_test_inputs/**"],
         allow_empty = True,
-    ) + select({
-        "@cifuzz//:collect_coverage": glob([".explore_me_fuzz_test_cifuzz_corpus/**"], allow_empty = True),
-        "//conditions:default": [],
-    }),
+    ),
     deps = [
         ":explore_me",
         "@cifuzz",
